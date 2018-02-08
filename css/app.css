@@ -1,25 +1,41 @@
-body {
-  height: 100vh;
-  background: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+
+:root {
+  --main-bg-color: #ef3d62;
+  --fontMain: normal 1.2em/2.2em Montserrat, sans-serif;
 }
+
+main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #31215b;
+  top: 0;
+  display:none;
+
+}
+body {
+  margin: 0;
+    overflow: hidden;
+}
+
+header {
+  position: relative;
+  z-index: 200;
+}
+
+
+
+
+
 
 .social-icons {
   transform: scale(1.5);
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: row;
+  display: grid;
   margin: 0;
   padding: 0;
   list-style: none;
-}
 
+}
 .social-icon {
   opacity: 0;
   transition: opacity .3s;
@@ -34,4 +50,36 @@ body {
 }
 .social-icon .si-icon {
   transform-origin: "center center";
+}
+footer {
+  display: none;
+  float: left;
+  z-index: 1000;
+  position: absolute;
+  padding-left: 1em;
+  top: 35%;
+
+}
+
+
+#middle {
+  display:none;
+}
+
+#end {
+  display: none;
+}
+
+#bigger {
+  display: none;
+}
+#logo {
+  display: none;
+}
+#start {
+  display:none;
+}
+#prestart {
+  display:none;
+  z-index: 1000;
 }
