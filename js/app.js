@@ -1,6 +1,35 @@
+
+new Vue ({
+  el: '#thebody',
+  data: {
+    
+  }
+})
+
+
+
+
+
+
+
+
+
 MorphSVGPlugin.convertToPath("#prestart");
 let gucci1 = document.getElementById("prestart");
-let gucci2 = document.querySelectorAll('#projectList')
+let animationEnd = (function(el) {
+  let animations = {
+    "animation": "animationend",
+    "OAnimation": "oAnimationEnd",
+    "MozAnimation": "mozAnimationEnd",
+    "WebkitAnimation": "webkitAnimationEnd"
+  }
+
+  for(let t in animations) {
+    if(el.style[t] !== undefined) {
+      return animations[t];
+    }
+  }
+})(document.createElement("fakeelement"));
 
 
 window.onload = introAnim;
@@ -16,16 +45,21 @@ function introAnim() {
   .to(gucci1, .3, {morphSVG:"#bigger"})
   .to(gucci1, 1.7, {morphSVG:"#logo", ease: Elastic.easeOut.config(.25, 0.65)});
 
-
   function transition() {
     gucci1.classList.add('animated');
     gucci1.classList.add('flipOutY');
-    document.getElementById('maincontent').style.display = "block";
-    document.getElementById('maincontent').classList.add('flipInY');
-    document.getElementById('socialmedia').style.display = "grid";
-    document.getElementById('introduce').style.display = "none";
-    socialMedia();
+    $('#prestart').one(animationEnd, function() {
+      document.getElementById('navLogo').classList.add('fadeIn');
+      document.getElementById('maincontent').style.display = "block";
+      document.getElementById('maincontent').classList.add('flipInY');
+      document.getElementById('socialmedia').style.display = "grid";
+      document.getElementById('introduce').style.display = "none";
+      document.getElementById('thebody').style.backgroundColor = "#31215b";
+      socialMedia();
+    });
   }
+
+
 
 
   function socialMedia() {

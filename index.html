@@ -110,13 +110,13 @@
   </svg>
 </header>
 
-<main id="maincontent" class="animated">
+<main v-if="portfolioView" id="maincontent" class="animated">
 
-  <nav class="animated fadeIn">
+  <nav class="animated" id="navLogo">
   </nav>
   <article class="animated fadeIn" id="introText">
     <h1>
-      Hi! I'm Aidan Prehatny.<br> Im a Front End Developer based
+      Hi! I'm Aidan!<br> Im a Front End Developer based
       in San Diego, California. I create websites and applications using HTML5,
       CSS3, Javascript and Vue.js! I love user interface and
       interaction design, as well as keeping up with the newest web technologies!
@@ -125,35 +125,52 @@
     <div></div>
   </article>
   <ul class="projectList" id="projectList">
-    <li id="memory" class="projectGrid animated fadeIn" ><h3></h3><a></a> <p>A memory game web application based off the traditional concentration memory game made with javascript and Web APIs. </p></li>
-    <li id="arcade" class="projectGrid animated fadeIn" ><h3></h3><a></a> <p> A frogger style arcade game made with Object Oriented ES6 javascript classes and a basic HTML5 Canvas game engine</p></li>
-    <li id="china" class="projectGrid animated fadeIn" ><h3></h3><a></a> <p> My introduction to javascript, which features a web page built with jQuery and d3.js to produce data heavy, interactive infographics (Non-responsive) </p></li>
-    <li id="cssgrid" class="projectGrid animated fadeIn" ><h3></h3><a></a> <p> A small fully responsive portfolio website homepage made using CSS grid/flexbox/media queries</p></li>
-    <li id="feedread" class="projectGrid animated fadeIn" ><h3></h3><a></a> <p> A test suite for a web based application that reads RSS feeds, built with Jasmine, runs effective tests which requires analyzing multiple aspects of the application</p></li>
-    <li id="portfolio" class="projectGrid animated fadeIn" ><h3></h3><a></a> <p> A high-performance, Responsive website that uses the power of creative SVG, Greensock (GSAP) & ScrollMagic powered animations for enriching user experience.</p></li>
-  </ul>
-</main>
+    <li id="memory" class="projectGrid animated fadeIn" ><h3>Concentration Memory Game</h3><a  href="https://www.w3schools.com">
 
-<footer id='socialmedia' class="animated">
-  <ul class="social-icons">
-    <li class="social-icon animated fadeIn si-fb"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><path class="si-grid" fill="#ffffff" d="M0 0h80v80H0z"></path><path class="si-splash" id="facebook-splash" fill="#4065B1" fill-rule="nonzero" d="M64.390766 7.893908c9.13892 9.586965-3.91575 14.742016.007852 26.63074 3.923603 11.888725 14.324106 14.96342 8.658127 27.114154-5.66598 12.150732-26.532488 3.603945-34.986257 10.31272-8.45377 6.708774-18.30274 6.258113-20.89926-9.745485-2.596518-16.0036-21.680047-20.760404-6.134962-40.13869 15.545086-19.378288 44.21558-23.760404 53.3545-14.17344z"></path><path class="si-round" id="facebook-round" fill="#4065B1" fill-rule="nonzero" d="M40 16c-13.254822 0-24 10.747563-24 24.000975C16 53.256335 26.745178 64 40 64s24-10.743665 24-23.999025C64 26.747563 53.253848 16 40 16z"></path><path class="si-icon" id="facebook-icon" fill="#FFF" d="M48,34.1c-2.6,0-4.3,1.4-5,2.8h-0.1v-2.3h-5.1v17.2h5.3v-8.5c0-2.2,0.4-4.4,3.2-4.4c2.7,0,2.8,2.6,2.8,4.5v8.4h5.3v-9.4C54.4,37.7,53.4,34.1,48,34.1z M31.7,26c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1c1.7,0,3.1-1.4,3.1-3.1C34.8,27.4,33.4,26,31.7,26z M29,51.6c0,0.1,0.1,0.1,0.1,0.1h2.5h2.5c0.1,0,0.1-0.1,0.1-0.1v-8.9v-8.5c0-0.1-0.1-0.1-0.1-0.1L31.9,34
-      l-2.7,0.1c-0.1,0-0.1,0.1-0.1,0.1V51.6z"></path></svg></a></li>
-      <li class="social-icon animated fadeIn si-yt"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><path class="si-grid" fill="#ffffff" d="M0 0h80v80H0z"></path><path class="si-splash" id="codepen-splash" fill="#E82213" d="M32 7C53-3 50 25 68 31s5.37705 39.535266-17 42c-20.599976 2.268997-12.902118-14.696072-31-14-26 1-9-42 12-52zm-9.171732 70.949766c-4.095558 0-7.415664-3.29269-7.415664-7.354432 0-4.06174 3.320106-7.35443 7.415664-7.35443 4.09556 0 7.415665 3.29269 7.415665 7.35443s-3.320106 7.354432-7.415665 7.354432z"></path><path class="si-round" id="youtube-round" fill="#E82213" d="M40 16c-13.254822 0-24 10.745178-24 24 0 13.256772 10.745178 24 24 24s24-10.743228 24-24c0-13.254822-10.746152-24-24-24z"></path><path class="si-icon" id="youtube-icon" fill="#FFF" d="M38.3,47.8c-0.9,5-2.1,9.7-5.5,12.2c-1.1-7.5,1.6-13.1,2.8-19.1c-2.1-3.5,0.2-10.5,4.6-8.7
-        c5.4,2.1-4.6,12.9,2.1,14.3c7,1.4,9.9-12.2,5.5-16.6c-6.3-6.4-18.3-0.1-16.8,9c0.4,2.2,2.7,2.9,0.9,6c-4-0.9-5.2-4.1-5.1-8.3
-        C27,29.6,33,24.7,39,24.1c7.6-0.8,14.7,2.8,15.6,9.9c1.1,8-3.4,16.7-11.5,16.1C40.9,49.9,40,48.8,38.3,47.8z"></path></svg></a></li>
-        <li class="social-icon animated fadeIn si-tw"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><path class="si-grid" fill="#ffffff" d="M0 0h80v80H0z"></path><path class="si-splash" id="twitter-splash" fill="#31A3DC" fill-rule="nonzero" d="M31.73994 72.48838c-11.444275-5.18428-5.9998-8.9997-10.999633-17.9994-4.999832-8.999698-17.872137-8.437337-17.206565-21.137207.665572-12.69987 17.155233-9.957153 22.206398-18.861454 5.051165-8.9043 21.02869-13.15246 28.99903 0 7.97034 13.15245 24.188624 9.05915 17.40265 31.62607-6.78597 22.56691-28.957606 31.55626-40.40188 26.37199z"></path><path class="si-round" id="twitter-round" fill="#31A3DC" d="M40 16c-13.254822 0-24 10.745178-24 24 0 13.256772 10.745178 24 24 24s24-10.743228 24-24c0-13.254822-10.746152-24-24-24z"></path><path class="si-icon" id="twitter-icon" fill="#FFF" d="M26,46.5l12.4,8.3v-7.4l-6.9-4.6L26,46.5z M24.8,43.6l4-2.6l-4-2.6V43.6z M41.6,54.8L54,46.5l-5.5-3.7
-          l-6.9,4.6V54.8z M40,44.7l5.6-3.7L40,37.2l-5.6,3.7L40,44.7z M31.6,39l6.9-4.6v-7.4L26,35.3L31.6,39z M51.3,40.9l4,2.6v-5.3
-          L51.3,40.9z M48.4,39l5.5-3.7l-12.4-8.3v7.4L48.4,39z M58.4,35.3v11.2c0,0.6-0.2,1-0.7,1.3L40.9,59c-0.3,0.2-0.6,0.3-0.9,0.3
-          s-0.6-0.1-0.9-0.3L22.3,47.8c-0.5-0.3-0.7-0.8-0.7-1.3V35.3c0-0.6,0.2-1,0.7-1.3l16.8-11.2c0.3-0.2,0.6-0.3,0.9-0.3
-          s0.6,0.1,0.9,0.3L57.7,34C58.2,34.3,58.4,34.7,58.4,35.3z "></path></svg></a></li>
-          <li class="social-icon animated fadeIn si-st"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><path class="si-grid" fill="#ffffff" d="M0 0h80v80H0z"></path><path class="si-splash" id="github-splash" fill="#353535" fill-rule="nonzero" d="M45.331115 21.477975c14.95994 1.83685 29.52978-1.394228 32.937636 12.07628 3.40786 13.470507-13.03519 15.467577-22.95696 30.31343C45.39003 78.71354 31 79 19 67 7 55-4 20 12.514925 8.4126c16.514925-11.5874 17.85625 11.228525 32.81619 13.065375zm5.127594-3.769112c-4.09556 0-7.41567-3.29269-7.41567-7.354432C43.04304 6.29269 46.36315 3 50.45871 3c4.095557 0 7.415663 3.29269 7.415663 7.35443 0 4.061742-3.320106 7.354433-7.415664 7.354433z"></path><path class="si-round" id="github-round" fill="#353535" fill-rule="nonzero" d="M40 16c13.253848 0 24 10.747563 24 24.000975C64 53.256335 53.254822 64 40 64S16 53.256335 16 40.000975C16 26.747563 26.745178 16 40 16z"></path><path class="si-icon" id="github-icon" fill="#FFF" d="M44,44.8c0.6,0.5,1.2,1.6,1.2,3.3c0,2.4,0,4.3,0,4.9c0,0.4,0.2,0.8,0.6,0.9H35.7c0.5-0.1,0.6-0.5,0.6-0.9
-            c0-0.4,0-1.5,0-3c-5,1.1-6-2.4-6-2.4c-0.8-2.1-2-2.6-2-2.6c-1.6-1.1,0.1-1.1,0.1-1.1c1.8,0.1,2.7,1.8,2.7,1.8
-            c1.6,2.7,4.2,1.9,5.2,1.5c0.2-1.2,0.6-1.9,1.1-2.4c-4-0.5-8.1-2-8.1-8.8c0-2,0.7-3.5,1.8-4.8c-0.2-0.4-0.8-2.3,0.2-4.7
-            c0,0,1.5-0.5,4.9,1.8c1.4-0.4,3-0.6,4.5-0.6c1.5,0,3.1,0.2,4.5,0.6c3.4-2.3,4.9-1.8,4.9-1.8c1,2.5,0.4,4.3,0.2,4.7
-            c1.1,1.3,1.8,2.8,1.8,4.8C52.2,42.8,48,44.3,44,44.8z"></path></svg></a></li>
-          </ul>
-        </footer>
-        <script src="js/app.js"></script>
+      <svg width="15" height="15"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.55 18.55"><defs><style>.cls-1{fill:#fff;}</style></defs><title>VisitWebSVG</title><g id="site1" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon  class="cls-1" points="14.82 6.71 14.82 16.8 1.75 16.8 1.75 3.72 11.83 3.72 13.58 1.98 0 1.98 0 18.55 16.57 18.55 16.57 4.97 14.82 6.71"/><path class="cls-1" d="M18.55,0h-5.7L14.9,2.05,7.14,9.81l1.6,1.59,7.75-7.75L18.55,5.7Z"/></g></g></svg>
+      Play Game</a> <p>A memory game web application based off the traditional concentration memory game made with javascript and Web APIs. </p></li>
+      <li id="arcade" class="projectGrid animated fadeIn" ><h3>Classic Arcade Style Game</h3><a href="https://www.w3schools.com">
 
-      </body>
-      </html>
+        <svg width="15" height="15"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.55 18.55"><defs><style>.cls-1{fill:#fff;}</style></defs><title>VisitWebSVG</title><g id="site2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon id="anamorph2" class="cls-1" points="14.82 6.71 14.82 16.8 1.75 16.8 1.75 3.72 11.83 3.72 13.58 1.98 0 1.98 0 18.55 16.57 18.55 16.57 4.97 14.82 6.71"/><path class="cls-1" d="M18.55,0h-5.7L14.9,2.05,7.14,9.81l1.6,1.59,7.75-7.75L18.55,5.7Z"/></g></g></svg>
+        Play Game</a> <p> A frogger style arcade game made with Object Oriented ES6 javascript classes and a basic HTML5 Canvas game engine</p></li>
+        <li id="china" class="projectGrid animated fadeIn" ><h3>China's Energy Initiatives</h3><a href="https://www.w3schools.com">
+
+          <svg   width="15" height="15"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.55 18.55"><defs><style>.cls-1{fill:#fff;}</style></defs><title>VisitWebSVG</title><g id="site3" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="14.82 6.71 14.82 16.8 1.75 16.8 1.75 3.72 11.83 3.72 13.58 1.98 0 1.98 0 18.55 16.57 18.55 16.57 4.97 14.82 6.71"/><path class="cls-1" d="M18.55,0h-5.7L14.9,2.05,7.14,9.81l1.6,1.59,7.75-7.75L18.55,5.7Z"/></g></g></svg>
+          Visit Website</a> <p> My introduction to javascript, which features a web page built with jQuery and d3.js to produce data heavy, interactive infographics (Non-responsive) </p></li>
+          <li id="cssgrid" class="projectGrid animated fadeIn" ><h3>Exercise: Responsive Design</h3><a href="https://www.w3schools.com">
+
+            <svg width="15" height="15"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.55 18.55"><defs><style>.cls-1{fill:#fff;}</style></defs><title>VisitWebSVG</title><g id="site4" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="14.82 6.71 14.82 16.8 1.75 16.8 1.75 3.72 11.83 3.72 13.58 1.98 0 1.98 0 18.55 16.57 18.55 16.57 4.97 14.82 6.71"/><path class="cls-1" d="M18.55,0h-5.7L14.9,2.05,7.14,9.81l1.6,1.59,7.75-7.75L18.55,5.7Z"/></g></g></svg>
+            Visit Website</a> <p> A small fully responsive portfolio website homepage made using CSS grid/flexbox/media queries</p></li>
+            <li id="feedread" class="projectGrid animated fadeIn" ><h3>Feed Reader Testing</h3><a href="https://www.w3schools.com">
+
+              <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.55 18.55"><defs><style>.cls-1{fill:#fff;}</style></defs><title>VisitWebSVG</title><g id="site5" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="14.82 6.71 14.82 16.8 1.75 16.8 1.75 3.72 11.83 3.72 13.58 1.98 0 1.98 0 18.55 16.57 18.55 16.57 4.97 14.82 6.71"/><path class="cls-1" d="M18.55,0h-5.7L14.9,2.05,7.14,9.81l1.6,1.59,7.75-7.75L18.55,5.7Z"/></g></g></svg>
+              Visit Website</a> <p> A test suite for a web based application that reads RSS feeds, built with Jasmine, runs effective tests which requires analyzing multiple aspects of the application</p></li>
+              <li id="portfolio" class="projectGrid animated fadeIn" ><h3>My Portfolio Website</h3><a href="https://www.w3schools.com">Visit Website</a> <p> A high-performance, Responsive website that uses the power of creative SVG, Greensock (GSAP) & ScrollMagic powered animations for enriching user experience.</p></li>
+            </ul>
+          </main>
+
+          <footer id='socialmedia' class="animated">
+            <ul class="social-icons">
+              <li class="social-icon animated fadeIn si-fb"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><path class="si-grid" fill="#ffffff" d="M0 0h80v80H0z"></path><path class="si-splash" id="facebook-splash" fill="#4065B1" fill-rule="nonzero" d="M64.390766 7.893908c9.13892 9.586965-3.91575 14.742016.007852 26.63074 3.923603 11.888725 14.324106 14.96342 8.658127 27.114154-5.66598 12.150732-26.532488 3.603945-34.986257 10.31272-8.45377 6.708774-18.30274 6.258113-20.89926-9.745485-2.596518-16.0036-21.680047-20.760404-6.134962-40.13869 15.545086-19.378288 44.21558-23.760404 53.3545-14.17344z"></path><path class="si-round" id="facebook-round" fill="#4065B1" fill-rule="nonzero" d="M40 16c-13.254822 0-24 10.747563-24 24.000975C16 53.256335 26.745178 64 40 64s24-10.743665 24-23.999025C64 26.747563 53.253848 16 40 16z"></path><path class="si-icon" id="facebook-icon" fill="#FFF" d="M48,34.1c-2.6,0-4.3,1.4-5,2.8h-0.1v-2.3h-5.1v17.2h5.3v-8.5c0-2.2,0.4-4.4,3.2-4.4c2.7,0,2.8,2.6,2.8,4.5v8.4h5.3v-9.4C54.4,37.7,53.4,34.1,48,34.1z M31.7,26c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1c1.7,0,3.1-1.4,3.1-3.1C34.8,27.4,33.4,26,31.7,26z M29,51.6c0,0.1,0.1,0.1,0.1,0.1h2.5h2.5c0.1,0,0.1-0.1,0.1-0.1v-8.9v-8.5c0-0.1-0.1-0.1-0.1-0.1L31.9,34
+                l-2.7,0.1c-0.1,0-0.1,0.1-0.1,0.1V51.6z"></path></svg></a></li>
+                <li class="social-icon animated fadeIn si-yt"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><path class="si-grid" fill="#ffffff" d="M0 0h80v80H0z"></path><path class="si-splash" id="codepen-splash" fill="#E82213" d="M32 7C53-3 50 25 68 31s5.37705 39.535266-17 42c-20.599976 2.268997-12.902118-14.696072-31-14-26 1-9-42 12-52zm-9.171732 70.949766c-4.095558 0-7.415664-3.29269-7.415664-7.354432 0-4.06174 3.320106-7.35443 7.415664-7.35443 4.09556 0 7.415665 3.29269 7.415665 7.35443s-3.320106 7.354432-7.415665 7.354432z"></path><path class="si-round" id="youtube-round" fill="#E82213" d="M40 16c-13.254822 0-24 10.745178-24 24 0 13.256772 10.745178 24 24 24s24-10.743228 24-24c0-13.254822-10.746152-24-24-24z"></path><path class="si-icon" id="youtube-icon" fill="#FFF" d="M38.3,47.8c-0.9,5-2.1,9.7-5.5,12.2c-1.1-7.5,1.6-13.1,2.8-19.1c-2.1-3.5,0.2-10.5,4.6-8.7
+                  c5.4,2.1-4.6,12.9,2.1,14.3c7,1.4,9.9-12.2,5.5-16.6c-6.3-6.4-18.3-0.1-16.8,9c0.4,2.2,2.7,2.9,0.9,6c-4-0.9-5.2-4.1-5.1-8.3
+                  C27,29.6,33,24.7,39,24.1c7.6-0.8,14.7,2.8,15.6,9.9c1.1,8-3.4,16.7-11.5,16.1C40.9,49.9,40,48.8,38.3,47.8z"></path></svg></a></li>
+                  <li class="social-icon animated fadeIn si-tw"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><path class="si-grid" fill="#ffffff" d="M0 0h80v80H0z"></path><path class="si-splash" id="twitter-splash" fill="#31A3DC" fill-rule="nonzero" d="M31.73994 72.48838c-11.444275-5.18428-5.9998-8.9997-10.999633-17.9994-4.999832-8.999698-17.872137-8.437337-17.206565-21.137207.665572-12.69987 17.155233-9.957153 22.206398-18.861454 5.051165-8.9043 21.02869-13.15246 28.99903 0 7.97034 13.15245 24.188624 9.05915 17.40265 31.62607-6.78597 22.56691-28.957606 31.55626-40.40188 26.37199z"></path><path class="si-round" id="twitter-round" fill="#31A3DC" d="M40 16c-13.254822 0-24 10.745178-24 24 0 13.256772 10.745178 24 24 24s24-10.743228 24-24c0-13.254822-10.746152-24-24-24z"></path><path class="si-icon" id="twitter-icon" fill="#FFF" d="M26,46.5l12.4,8.3v-7.4l-6.9-4.6L26,46.5z M24.8,43.6l4-2.6l-4-2.6V43.6z M41.6,54.8L54,46.5l-5.5-3.7
+                    l-6.9,4.6V54.8z M40,44.7l5.6-3.7L40,37.2l-5.6,3.7L40,44.7z M31.6,39l6.9-4.6v-7.4L26,35.3L31.6,39z M51.3,40.9l4,2.6v-5.3
+                    L51.3,40.9z M48.4,39l5.5-3.7l-12.4-8.3v7.4L48.4,39z M58.4,35.3v11.2c0,0.6-0.2,1-0.7,1.3L40.9,59c-0.3,0.2-0.6,0.3-0.9,0.3
+                    s-0.6-0.1-0.9-0.3L22.3,47.8c-0.5-0.3-0.7-0.8-0.7-1.3V35.3c0-0.6,0.2-1,0.7-1.3l16.8-11.2c0.3-0.2,0.6-0.3,0.9-0.3
+                    s0.6,0.1,0.9,0.3L57.7,34C58.2,34.3,58.4,34.7,58.4,35.3z "></path></svg></a></li>
+                    <li class="social-icon animated fadeIn si-st"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><path class="si-grid" fill="#ffffff" d="M0 0h80v80H0z"></path><path class="si-splash" id="github-splash" fill="#353535" fill-rule="nonzero" d="M45.331115 21.477975c14.95994 1.83685 29.52978-1.394228 32.937636 12.07628 3.40786 13.470507-13.03519 15.467577-22.95696 30.31343C45.39003 78.71354 31 79 19 67 7 55-4 20 12.514925 8.4126c16.514925-11.5874 17.85625 11.228525 32.81619 13.065375zm5.127594-3.769112c-4.09556 0-7.41567-3.29269-7.41567-7.354432C43.04304 6.29269 46.36315 3 50.45871 3c4.095557 0 7.415663 3.29269 7.415663 7.35443 0 4.061742-3.320106 7.354433-7.415664 7.354433z"></path><path class="si-round" id="github-round" fill="#353535" fill-rule="nonzero" d="M40 16c13.253848 0 24 10.747563 24 24.000975C64 53.256335 53.254822 64 40 64S16 53.256335 16 40.000975C16 26.747563 26.745178 16 40 16z"></path><path class="si-icon" id="github-icon" fill="#FFF" d="M44,44.8c0.6,0.5,1.2,1.6,1.2,3.3c0,2.4,0,4.3,0,4.9c0,0.4,0.2,0.8,0.6,0.9H35.7c0.5-0.1,0.6-0.5,0.6-0.9
+                      c0-0.4,0-1.5,0-3c-5,1.1-6-2.4-6-2.4c-0.8-2.1-2-2.6-2-2.6c-1.6-1.1,0.1-1.1,0.1-1.1c1.8,0.1,2.7,1.8,2.7,1.8
+                      c1.6,2.7,4.2,1.9,5.2,1.5c0.2-1.2,0.6-1.9,1.1-2.4c-4-0.5-8.1-2-8.1-8.8c0-2,0.7-3.5,1.8-4.8c-0.2-0.4-0.8-2.3,0.2-4.7
+                      c0,0,1.5-0.5,4.9,1.8c1.4-0.4,3-0.6,4.5-0.6c1.5,0,3.1,0.2,4.5,0.6c3.4-2.3,4.9-1.8,4.9-1.8c1,2.5,0.4,4.3,0.2,4.7
+                      c1.1,1.3,1.8,2.8,1.8,4.8C52.2,42.8,48,44.3,44,44.8z"></path></svg></a></li>
+                    </ul>
+                  </footer>
+
+
+                <script src="js/app.js"></script>
+
+              </body>
+              </html>

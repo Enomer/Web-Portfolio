@@ -8,11 +8,11 @@ main {
   background-color: #31215b;
   top: 0;
   display:none;
-
+  -webkit-animation-duration: 1s;
 }
 body {
   margin: 0;
-  background-color: #31215b;
+  background-color: #ffffff;
 }
 
 header {
@@ -24,7 +24,7 @@ nav {
   width: 8em;
   height: 8em;
   background-repeat: no-repeat;
-  margin: 2em;
+  margin: auto;
 }
 
 #introText {
@@ -36,14 +36,13 @@ nav {
   margin-bottom: 4em;
 }
 
+#fallout{
+  display: none;
+}
 #projectList {
   display: grid;
-  grid-template-areas:
-  'memory arcade'
-  'china cssgrid'
-  'feedread portfolio';
   grid-gap: 2em;
-  grid-auto-columns:  1fr 1fr;
+  grid-template-columns:  1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   width: 70%;
   margin: auto;
@@ -52,31 +51,46 @@ nav {
   color: var(--pinkish);
 }
 
-
-#memory {
-  grid-area: memory;
-}
-#arcade{
-  grid-area: arcade;
-}
-#china {
-  grid-area: china;
-}
-#cssgrid {
-  grid-area: cssgrid;
-}
-#feedread {
-  grid-area: feedread;
-}
-#portfolio {
-  grid-area: portfolio;
-}
-
 .projectGrid {
   -webkit-animation-delay: 2s;
   -webkit-animation-duration: 2s;
+  border: .15em solid var(--pinkish);
+  padding: 2em;
+  text-align: center;
 }
 
+
+
+
+.projectGrid p{
+  padding: .15em .15em;
+}
+
+.projectGrid a {
+  -webkit-border-radius: 11;
+  -moz-border-radius: 11;
+  border-radius: 11px;
+  color: #ffffff;
+  background: #ef3d61;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  font: var(--fontMain);
+  font-weight: bold;
+  z-index: 55;
+}
+
+.projectList li {
+  display: block;
+  grid-template-rows: 2fr .5fr 4fr;
+}
+
+.projectList h3 {
+  font-size: 1.3em;
+}
+
+#introText {
+  grid-template-columns: 1fr 4fr 1fr;
+}
 
 #introText h1:nth-of-type(1) {
   order: 2;
@@ -84,69 +98,97 @@ nav {
 
 #introText div:nth-of-type(2) {
   order: 3;
-}#introText div:nth-of-type(3) {
-  order: 1;
-}
+  }#introText div:nth-of-type(3) {
+    order: 1;
+  }
 
 
-#logoMain1 {
-  width: 2em;
-  height: 2em;
-  position: absolute;
-}
+  #logoMain1 {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+  }
 
-.social-icons {
-  transform: scale(1.5);
-  display: grid;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .social-icons {
+    transform: scale(1.5);
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-}
-.social-icon {
-  opacity: 0;
-  transition: opacity .3s;
+  }
+  .social-icon {
+    opacity: 0;
+    transition: opacity .3s;
 
-}
-.social-icon svg {
-  overflow: visible !important;
-}
-.social-icon .si-splash,
-.social-icon .si-grid {
-  display: none;
-  visibility: hidden;
-}
-.social-icon .si-icon {
-  transform-origin: "center center";
-}
-footer {
-  display: none;
-  float: left;
-  z-index: 1000;
-  position: absolute;
-  padding-left: 1em;
-  top: 35%;
+  }
+  .social-icon svg {
+    overflow: visible !important;
+  }
+  .social-icon .si-splash,
+  .social-icon .si-grid {
+    display: none;
+    visibility: hidden;
+  }
+  .social-icon .si-icon {
+    transform-origin: "center center";
+  }
+  footer {
+    display: none;
+    float: left;
+    z-index: 1000;
+    position: fixed;
+    padding-left: 1em;
+    top: 35%;
+  }
 
-}
+
+  #prestart{
+    z-index: 1000;
+  }
+  #middle {
+    display:none;
+  }
+
+  #end {
+    display: none;
+  }
+
+  #bigger {
+    display: none;
+  }
+  #logo {
+    display: none;
+  }
+  #start {
+    display:none;
+  }
+
+  @media screen and (max-width: 1190px) {
+    .projectList li {
+      display: grid;
+      grid-template-rows: 1fr .5fr 2fr
+    }
+    #introText {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+  }
 
 
-#prestart{
-  z-index: 1000;
-}
-#middle {
-  display:none;
-}
+  @media screen and (max-width: 798px) {
+    #projectList {
+      grid-template-columns: 1fr;
+    }
+    .projectList li {
+      display: grid;
+      grid-template-rows: 1fr .5fr 2fr;
+    }
+    #introText {
+      grid-template-columns: 1fr 4fr 1fr;
+    }
+    footer {
+      display: none !important;
+    }
 
-#end {
-  display: none;
-}
-
-#bigger {
-  display: none;
-}
-#logo {
-  display: none;
-}
-#start {
-  display:none;
-}
+  }
