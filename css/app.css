@@ -294,6 +294,15 @@ nav {
   border: solid 3px var(--darkpurp);
 }
 
+#chinaAssets {
+  height: 20em;
+  width: 40em;
+  display: flex;
+  margin:auto;
+  border-radius: 3%;
+  border: solid 3px var(--darkpurp);
+}
+
 
 .projectGrid p{
   padding: .15em .15em;
