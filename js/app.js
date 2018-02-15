@@ -54,7 +54,7 @@ new Vue ({
       this.title = "China's Energy Initatives";
       this.subhead= 'Infographical web page with interactive elements, My introduction to javascript, which features a web page built with jQuery and datavisu.al; a platform utilizing d3.js, to produce data heavy, interactive infographics';
       this.playApp=  "<a class='visitAll' id='visitChina' class='animated fadeIn' target='_blank' href='https://enomer.github.io/Energy-Initiatives/#'>Visit Site</a>";
-      this.headerAssets= "<iframe id='graphChina' src='https://s3.amazonaws.com/datavisual/embeds/235c5691f4.html' style='height:400.4953877690468px; max-width:606px; width:100%; border: 0px; overflow: hidden' scrolling='no'></iframe><script src='http://datavisu.al/js/lazyLoad.js#!dv-6881f01518669842192,235c5691f4.html'></script>";
+      this.headerAssets= "<p><strong>*Interactive Infographic</p><iframe id='graphChina' src='https://s3.amazonaws.com/datavisual/embeds/235c5691f4.html' style='height:400.4953877690468px; max-width:606px; width:100%; border: 0px; overflow: hidden' scrolling='no'></iframe><script src='http://datavisu.al/js/lazyLoad.js#!dv-6881f01518669842192,235c5691f4.html'></script>";
       this.subHead1= 'Project Objectives';
       this.bodyContent1= "Informative, informational, and interactive website:<br> <br> •	Design animated infographics which have minor hover state interaction <br> •	Use jQuery to develop small microinteractions and animation <br>•	Develop experimental CSS buttons with psuedo class elements and creative techniques for styling using bootstrap button glyphs. <br> • Script small sequences which depended on certain variables(both buttons clicked spawns small paragraph) <br><br>";
       this.subHead2= 'Challenges';
@@ -116,8 +116,8 @@ new Vue ({
     chinaInterval: function() {
         this.anInterval = setInterval(
           function() {
-            document.getElementById('headerAssets').innerHTML = "<iframe id='graphChina' src='https://s3.amazonaws.com/datavisual/embeds/235c5691f4.html' style='height:400.4953877690468px; max-width:606px; width:100%; border: 0px; overflow: hidden' scrolling='no'></iframe><script src='http://datavisu.al/js/lazyLoad.js#!dv-6881f01518669842192,235c5691f4.html'></script>";
-          }, 2500)
+            document.getElementById('headerAssets').innerHTML = "<p><strong>*Interactive Infographic</p><iframe id='graphChina' src='https://s3.amazonaws.com/datavisual/embeds/235c5691f4.html' style='height:400.4953877690468px; max-width:606px; width:100%; border: 0px; overflow: hidden' scrolling='no'></iframe><script src='http://datavisu.al/js/lazyLoad.js#!dv-6881f01518669842192,235c5691f4.html'></script>";
+          }, 3500)
     }
   }
 

@@ -2,6 +2,7 @@
 :root {
   --pinkish: #fff;
   --fontMain: normal 1em/2.2em Montserrat, sans-serif;
+  --darkpurp: rgb(63, 0, 107);
 }
 #portfolioOut {
   position: fixed;
@@ -289,6 +290,8 @@ nav {
   width: 15em;
   display: flex;
   margin: auto;
+  border-radius: 3%;
+  border: solid 3px var(--darkpurp);
 }
 
 
