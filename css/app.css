@@ -129,6 +129,7 @@
   display:  grid;
   grid-template-columns:  .5fr;
   justify-content:  center;
+  width: 100%;
   margin-top: 5em;
 }
 
@@ -281,8 +282,7 @@ nav {
 
 #graphChina {
   display: flex;
-  margin: auto;
-  transform: scale(.6);
+  margin: auto
 }
 
 #chinaBtnGif {
@@ -301,7 +301,6 @@ nav {
   margin:auto;
   border-radius: 3%;
   border: solid 3px var(--darkpurp);
-  transform: scale(.8);
 }
 
 
@@ -559,6 +558,5 @@ nav {
   @media screen and (max-width: 840px) {
     #portfolioOut {
       height: 150% !important;
-      transform: scale(3);
     }
   }
