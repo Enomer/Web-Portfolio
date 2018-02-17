@@ -622,8 +622,8 @@ nav {
       width: 80vw;
     }
     #feederTest {
-      height: 70vw;
-      width: 70vw;
+      height: 83vw;
+      width: 83vw;
     }
 
     #hamburgerExercise {
@@ -633,7 +633,10 @@ nav {
     #graphChina {
       transform: scale(.7);
     }
-
+  }
+  #subHead1 {
+    padding: 0;
+    margin: 0;
   }
 
   @media screen and (max-width: 840px) {
@@ -647,14 +650,37 @@ nav {
       transform: scale(1.1);
       padding-left: 5em
     }
+
+    #RAIL {
+      height: 25% !important;
+      width: 75% !important;
+    }
   }
 
 
 
+#VueSVG{
+  width: 20em;
+  height: 20em;
+  margin: auto;
 
+}
+  #vue2 {
+    display: none;
+  }
 
+  #vue3 {
+    display: none;
+  }
 
+  #vue1 {
+    fill: url('#vue3_1_');
+  }
 
+#RAIL {
+  height: 15%;
+  width: 50%;
+}
 
 
   @keyframes buggy1 {
