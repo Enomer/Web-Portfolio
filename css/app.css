@@ -647,7 +647,9 @@ nav {
       margin: 0;
     }
     .flipExamp {
-      padding: 4em;
+      padding: 3em;
+      width: 8em;
+      height: 8em;
     }
     #visitArcade {
       display: none;
@@ -672,8 +674,8 @@ nav {
       width: 75% !important;
     }
     #arcadeSS {
-      height: 20em;
-      width: 17em;
+      height: 15em;
+      width: 12.4em;
     }
   }
 
