@@ -11,12 +11,14 @@
 
 #logo2 {
   padding: 1em 1em;
+  transform: scale(.7);
+  fill: #fff;
 }
+
 
 #closure {
   z-index: 1000;
 }
-
 
 #truffleShuffle {
   display: flex;
@@ -49,7 +51,7 @@
 
 #visitMem {
   color: #00b7ff;
-    padding: 1em 1.8em;
+  padding: 1em 1.8em;
 }
 #visitChina {
   background: #ffd530;
@@ -124,8 +126,9 @@
 }
 
 #feederTest {
-  height: 25vw;
-  width: 25vw;
+  height: 35em;
+  width: 38em;
+  border: 4px solid white;
 }
 
 
@@ -319,6 +322,7 @@ nav {
   list-style-type: none;
   font: var(--fontMain);
   color: var(--pinkish);
+  padding: 0;
 }
 
 .projectGrid {
@@ -629,12 +633,19 @@ nav {
     #graphChina {
       transform: scale(.7);
     }
+
   }
 
   @media screen and (max-width: 840px) {
     #portfolioOut {
       height: 150% !important;
       transform: scale(2);
+    }
+
+    #logo2 {
+      position: relative;
+      transform: scale(1.1);
+      padding-left: 5em
     }
   }
 
@@ -647,52 +658,55 @@ nav {
 
 
   @keyframes buggy1 {
-  from {
-    opacity: 0;
-    left: -200px;
+    from {
+      opacity: 0;
+      left: -200px;
+    }
+    to {
+      opacity: 1;
+      left: 100%;
+    }
   }
-  to {
-    opacity: 1;
-    left: 100%;
+
+
+
+
+  #buggy2 {
+    opacity: .1;
   }
-}
 
 
-
-
-
-
-
-.buggy {
-  margin: 0;
-  position: relative;
-}
+  .buggy {
+    margin: 0;
+    position: relative;
+  }
 
   @keyframes my-animation {
-  from {
-    opacity: 0;
-    left: -800px;
+    from {
+      opacity: 0;
+      left: -600px;
+    }
+    to {
+      opacity: 1;
+      left: 103%;
+    }
   }
-  to {
-    opacity: 1;
-    left: 95%;
+  .run-animation1 {
+    position: fixed;
+    animation: buggy1 2s ease;
+    animation-iteration-count: infinite;
+    top: 10%;
   }
-}
-.run-animation1 {
-  position: fixed;
-  animation: buggy1 2s ease;
-  animation-iteration-count: infinite;
-  top: 10%;
-}
-.run-animation2 {
-  position: fixed;
-  animation: my-animation 2s ease-out;
-  animation-iteration-count: infinite;
-  top: 50%;
-}
-.run-animation3 {
-  position: fixed;
-  animation: my-animation 3s ease;
-  animation-iteration-count: infinite;
-  top: 95%;
-}
+  .run-animation2 {
+    position: fixed;
+    animation: my-animation 2s ease-out;
+    animation-iteration-count: infinite;
+    top: 50%;
+    opacity: .1;
+  }
+  .run-animation3 {
+    position: fixed;
+    animation: my-animation 3s ease;
+    animation-iteration-count: infinite;
+    top: 95%;
+  }
