@@ -22,11 +22,9 @@
 
 #truffleShuffle {
   display: flex;
-  justify-content: center;
   margin: auto;
-  padding: 2em;
-  border-radius: 8%;
-  border: 20px white;
+  padding-top: 2em;
+  padding-bottom: 2em;
   width: 16em;
   height: 9em;
 }
@@ -653,6 +651,10 @@ nav {
     }
     #visitArcade {
       display: none;
+    }
+    #truffleShuffle {
+      width: 12em;
+      height: 6em;
     }
 
   }
